@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "magnetoengine",
+  "private_key_id": "3bb4e01b68111fd08de6403e7a201d82b22f3312",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClwaaUGlScCly5\nOhP6Oe/8AHJyE0bUabtcCjeviHuD5vJ2BLxUfpexIY0VOhddS0hjJb01znj00pFu\nxAPSuuBZeApAkMP3CGV9tHS+9OOFIqwKSeB2yz3Jzq7pSbNe8Hs5HfzSDm9vSapb\nrJnp+AsYBl3JK3gbeiJLXNTWm08O5tyYUhSESw6U1xbG3B8u5NEbAEmpTnW2U/ac\nh6ErhS2fJEpxa0hexHB+LbJhAALR8z4/a1CJXXxBhycvBCW0rHRmTR9vsF+Dl+mB\n0vqia98GmuN16e2Dgq2vglp84ocgwyL5nVax+Y/fTTiK5NBgORH6z/jMRq1htQ45\n+PBjiArbAgMBAAECggEALH5m8KqAu8IsUaw9YJXczZBxKB30jWA0Yuh7OiswvJ9p\nxjRPOX8hyPJwpJoLW4exzqt6ts7NuSosz8beH9r6Dgoi9mHluJIQbEXccMXbrQk5\nlSlvj3PPCjTozsZx17JF4XcjPl+RmhX0HNegGSX0FGbhFfcNLpMCUaiBmXnnJuBy\n4c0vRjo2Q688k2GkbMY01OYfMcG1laE4x6ahkNv3UsZj8jKdYLHoNXWZFE3pfCW0\n2BCi0U4mSXEqVkhikmloht97HFMLjJybFXJnAXBxp7DNFGS9WtYHVUcEsLl3xZRX\nPya5D+Em+bKPfugIPVlXd3WeQrE1jrtpP+ZrUKAWwQKBgQDZ/4KatDpt/vGpg5Go\nzqQQCDR/V7SMQCH5feokC9CkNTXMNtJGodhRAFvIuixDsyMEXp9sGA2g5CwnGbJr\nt23AVoPWFy/sM1BRriFNTIOEqRHOU/UXLbfYFUmTzC5pcSfXN35oqzfkR2ALNhGQ\n7xP/zLyy/wmg2bAn5mZChPxI3QKBgQDCpseLOb/in9P15dWVP9nRjzPOoMBWyVWE\n2T1PnMXDhiM/lpZzqV/xv75gQKDJzPv7+hhz1u303aeMI/K32mDjFwEFa2NZH/br\nu7+y3h99SdNJccqrRGWjB4+YIJtP4BeszILtso4dSnyzic004txbZPMsxIPTmr+E\nBc/ARuwLFwKBgDeX0m2zcockkeph1B6RfANepEypSDDQFhnzA2fn33BQ5YRLorpC\ngdC+X6nD2I/3OgHeQ5ekVq1mIuBhzD9uCr4XEg3h4eXBfEUoO/PjhFKrbxAIFyOv\nFAg1/YqEcn2PTtKyozj8GQfNL/AL/NTSM25zftfC9GihuyuhtQhXs6K9AoGAP1fk\n0dLeNdKLOJctlR8tM/vlARXg4Z0tPkkvoYvD86fgKp5HoaX5ugMK4enGKUWSruIp\nOPE1iJzlHD7Kirf/FYdz5p6Wuvci9H2pmXydRLlUj67/JBLi/FXGjdv2jty+95Wp\n+c5EXxXRVN/ALriwuvE0DVp6B89xCXaWr9ykjcsCgYEAhPW+KeA9l96fY+cjQglf\n+MQsim2TRzdkasMNW/w9MXZSTfWYUie05SO1Tjr1KZ9YNjNFTC3kS7byvnRLNXVL\n84Oz0FqilzJQ6ctaHxxHTBibXYPIrLSpPBK0pk3kfPkGrKzgVl3nFEvicELPR/zY\n9MorjQgZh/Z7jDCXqluT37c=\n-----END PRIVATE KEY-----\n",
+  "client_email": "magnetoengine@appspot.gserviceaccount.com",
+  "client_id": "106527697982936761671",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/magnetoengine%40appspot.gserviceaccount.com"
+}
