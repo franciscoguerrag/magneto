@@ -29,7 +29,7 @@ Como hacer deploy
 
 ## Autores ✒️
 
-* **Francisco Guerra** - *Trabajo Inicial* - [villanuevand](https://github.com/franciscoguerrag)
+* **Francisco Guerra** - *Proyecto Magneto* - [franciscoguerrag](https://github.com/franciscoguerrag)
 
 ## Expresiones de Gratitud 🎁
 
