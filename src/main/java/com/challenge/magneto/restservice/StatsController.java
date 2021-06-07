@@ -1,8 +1,12 @@
-package com.challenge.magneto.repositories;
+package com.challenge.magneto.restservice;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.challenge.magneto.repositories.Human;
+import com.challenge.magneto.repositories.HumanService;
 
 import java.util.ArrayList;
 
@@ -11,16 +15,16 @@ import java.util.ArrayList;
 public class StatsController {
 
     @Autowired
-    StatsService statsService;
+    HumanService humanService;
 
     @GetMapping(path = "/stats")
-    private ArrayList<Human> getUsuarios() {
-        System.out.println("Buscando usuarios");
-        return statsService.obtenerTodosUsuarios();
+    private String getUsuarios() {
+    	return humanService.getStats().toString();
+       
     }
 
     @GetMapping(path = "/")
     private String mainRoot() {
-        return "Hello World Spring Boot - Google Cloud Platfom - Sql Cloud";
+        return "Proyecto Magneto Bienvenidos";
     }
 }

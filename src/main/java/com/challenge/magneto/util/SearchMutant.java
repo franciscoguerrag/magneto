@@ -14,7 +14,7 @@ public class SearchMutant {
 	 * 
 	 * @param dna del humano a analizar
 	 */
-	public void itdentifyMutant(String[] dna) {
+	public boolean isMutant(String[] dna) {
 		int n = dna.length + 1; // NXN
 		sequenceAdn = new char[n][n];
 		int rows = -1;
@@ -25,21 +25,22 @@ public class SearchMutant {
 		String[] patterns = { "AAAA", "CCCC", "GGGG", "TTTT" };
 		//Analisis de patrones
 		for (String pattern : patterns) {
+			System.out.println(pattern);
 			hm = new HashMap<String, ArrayList<Integer>>();
 			//Recorrido de estructura DNA
 			for (int row = 0; row < lenghtDna; row++) {
+				boolean find = false;
 				for (int col = 0; col < lenghtDna; col++) {
 					if (analyzePattern(row, col, pattern)) {
+						if (count >= 1) {
+							return true;
+						}
 						count = count + 1;
-						if (count > 1)
-							break;
 					}
 				}
-				if (count > 1)
-					break;
 			}
 		}
-		System.out.println("Numero de coincidencias" + count);
+		return false;
 	}
 
 	public boolean analyzePattern(int row, int column, String pattern) {

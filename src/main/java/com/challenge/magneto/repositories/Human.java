@@ -11,8 +11,19 @@ public class Human {
     private Long id;
 
     private String dna;
-   
-    public Long getId() {
+    
+    private boolean mutant;
+    
+    public Human() {
+	}
+    
+    public Human(String dna, boolean mutant) {
+		super();
+		this.dna = dna;
+		this.mutant = mutant;
+	}
+
+	public Long getId() {
         return id;
     }
 
@@ -27,5 +38,15 @@ public class Human {
 	public void setDna(String dna) {
 		this.dna = dna;
 	}
+
+	public boolean isMutant() {
+		return mutant;
+	}
+
+	public void setMutant(boolean mutant) {
+		this.mutant = mutant;
+	}
+	
+	
 
 }

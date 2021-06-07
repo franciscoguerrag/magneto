@@ -1,4 +1,4 @@
-package com.challenge.magneto.restservice;
+package com.challenge.magneto.repositories;
 
 import java.util.Arrays;
 
