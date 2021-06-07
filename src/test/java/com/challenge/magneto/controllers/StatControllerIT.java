@@ -11,6 +11,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestTemplate;
+
 @ActiveProfiles("test")
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class StatControllerIT {
@@ -21,7 +22,6 @@ class StatControllerIT {
 	@Test
 	public void testStatsResponse() throws Exception {
 		testStats();
-
 	}
 
 	private void testStats() throws Exception {
@@ -31,14 +31,13 @@ class StatControllerIT {
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("X-COM-PERSIST", "true");
 		ResponseEntity<Object> result = restTemplate.getForEntity(uri, Object.class);
-		System.out.println("result"+ result);
 		// Verify request succeed
 		Assertions.assertEquals(200, result.getStatusCodeValue());
 		Assertions.assertTrue(result.getBody().toString().contains("count_human_dna"));
 		Assertions.assertTrue(result.getBody().toString().contains("count_mutant_dna"));
 		Assertions.assertTrue(result.getBody().toString().contains("ratio"));
 	}
-	
+
 	@Test
 	public void testHumansResponse() throws Exception {
 		testHumans();
@@ -51,11 +50,10 @@ class StatControllerIT {
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("X-COM-PERSIST", "true");
 		ResponseEntity<Object> result = restTemplate.getForEntity(uri, Object.class);
-		System.out.println("result"+ result);
 		// Verify request succeed
 		Assertions.assertEquals(200, result.getStatusCodeValue());
 	}
-	
+
 	@Test
 	public void testWelcome() throws Exception {
 		testUrlBlank();
@@ -68,7 +66,6 @@ class StatControllerIT {
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("X-COM-PERSIST", "true");
 		ResponseEntity<Object> result = restTemplate.getForEntity(uri, Object.class);
-		System.out.println("result"+ result);
 		// Verify request succeed
 		Assertions.assertEquals(200, result.getStatusCodeValue());
 	}

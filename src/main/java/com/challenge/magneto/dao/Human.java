@@ -26,31 +26,9 @@ public class Human {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getDna() {
-		return dna;
-	}
-
-	public void setDna(String dna) {
-		this.dna = dna;
-	}
-
-	public boolean isMutant() {
-		return mutant;
-	}
-
-	public void setMutant(boolean mutant) {
-		this.mutant = mutant;
-	}
-
 	@Override
 	public String toString() {
-		return "{id:"+id+";dna:"+dna+"}";
+		return "{id:" + id + ";dna:" + dna + ";isMutant:" + mutant + "}";
 	}
-	
-	
 
 }

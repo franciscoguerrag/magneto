@@ -1,7 +1,5 @@
 package com.challenge.magneto.util;
 
-import java.util.Arrays;
-
 public class HumanResponse {
 
 	private String[] dna;

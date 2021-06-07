@@ -25,7 +25,6 @@ public class  SearchMutant {
 		String[] patterns = { "AAAA", "CCCC", "GGGG", "TTTT" };
 		// Analisis de patrones
 		for (String pattern : patterns) {
-			System.out.println(pattern);
 			hm = new HashMap<String, ArrayList<Integer>>();
 			// Recorrido de estructura DNA
 			for (int row = 0; row < lenghtDna; row++) {
