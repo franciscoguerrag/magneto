@@ -21,9 +21,4 @@ public class HumanResponse {
 		this.dna = dna;
 	}
 
-	@Override
-	public String toString() {
-		return "Human [dna=" + Arrays.toString(dna) + "]";
-	}
-
 }

@@ -14,7 +14,7 @@ public class BasicMutantService implements MutantService {
 	HumanRepository humanRepository;
 
 	public void insertHuman(Human human) {
-		//humanRepository.save(human);
+		humanRepository.save(human);
 	}
 
 	@Override

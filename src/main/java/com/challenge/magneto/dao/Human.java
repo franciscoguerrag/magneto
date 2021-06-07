@@ -46,4 +46,11 @@ public class Human {
 		this.mutant = mutant;
 	}
 
+	@Override
+	public String toString() {
+		return "{id:"+id+";dna:"+dna+"}";
+	}
+	
+	
+
 }

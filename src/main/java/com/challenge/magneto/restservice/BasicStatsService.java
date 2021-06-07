@@ -1,14 +1,13 @@
 package com.challenge.magneto.restservice;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.challenge.magneto.dao.Human;
 import com.challenge.magneto.repositories.HumanRepository;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 
 @Service
 
@@ -17,8 +16,8 @@ public class BasicStatsService implements StatsService {
 	@Autowired
 	HumanRepository humanRepository;
 
-	public ArrayList<Human> getHumans() {
-		return (ArrayList<Human>) humanRepository.findAll();
+	public JSONArray getHumans() {
+		return new JSONArray(humanRepository.findAll().toString());
 	}
 
 	public JSONObject getStats() {

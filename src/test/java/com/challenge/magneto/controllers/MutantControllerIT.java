@@ -10,11 +10,12 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import com.challenge.magneto.util.HumanResponse;
-
+@ActiveProfiles("test")
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class MutantControllerIT {
 
@@ -27,7 +28,7 @@ class MutantControllerIT {
 		testMutantOk(t1);
 		String[] t2 = { "TTGCAA", "BAGTGC", "TTTTGT", "AGAAGG", "CCCCTA", "TCACTG" };
 		testMutantOk(t2);
-		String[] t3 = { "CTGCAA", "BAGTGC", "TTATGT", "AGTTGG", "CTCCTA", "TCACTG" };
+		String[] t3 = { "AAAAAA", "BAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
 		testMutantOk(t3);
 	}
 
@@ -64,7 +65,6 @@ class MutantControllerIT {
 		HttpEntity<HumanResponse> request = new HttpEntity<>(humanResponse, headers);
 		try {
 			restTemplate.postForEntity(uri, request, Object.class);
-
 			Assertions.fail();
 		} catch (HttpClientErrorException ex) {
 			// Verify bad request and missing header

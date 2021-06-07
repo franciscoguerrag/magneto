@@ -14,14 +14,19 @@ public class StatsController {
 	StatsService statsService;
 
 	@GetMapping(path = "/stats")
-	private String getUsuarios() {
+	private String getStats() {
 		return statsService.getStats().toString();
+
+	}
+
+	@GetMapping(path = "/humans")
+	private String getHumans() {
+		return statsService.getHumans().toString();
 
 	}
 
 	@GetMapping(path = "/")
 	private String mainRoot() {
-		return "Proyecto Magneto \r\n"
-				+ "import com.challenge.magneto.repositories.HumanEntity;Bienvenidos";
+		return "{\"Proyecto Magneto\":\" Bienvenidos\"}";
 	}
 }
