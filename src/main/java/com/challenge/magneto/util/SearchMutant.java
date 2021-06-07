@@ -3,7 +3,7 @@ package com.challenge.magneto.util;
 // Java program to search
 import java.util.*;
 
-public class SearchMutant {
+public class  SearchMutant {
 
 	static HashMap<String, ArrayList<Integer>> hm;
 	static int lenghtDna = 6;
@@ -23,11 +23,11 @@ public class SearchMutant {
 		}
 		int count = 0;
 		String[] patterns = { "AAAA", "CCCC", "GGGG", "TTTT" };
-		//Analisis de patrones
+		// Analisis de patrones
 		for (String pattern : patterns) {
 			System.out.println(pattern);
 			hm = new HashMap<String, ArrayList<Integer>>();
-			//Recorrido de estructura DNA
+			// Recorrido de estructura DNA
 			for (int row = 0; row < lenghtDna; row++) {
 				boolean find = false;
 				for (int col = 0; col < lenghtDna; col++) {
@@ -52,7 +52,7 @@ public class SearchMutant {
 		int length = pattern.length();
 		// busqueda por cada direccion (corresponde a busqueda eje x, eje y)
 		for (int direction = 0; direction < 8; direction++) {
-			//Validación para evitar busqueda de patrones encontrados
+			// Validación para evitar busqueda de patrones encontrados
 			if (hm.get(row + "," + column) == null
 					|| (hm.get(row + "," + column) != null && !hm.get(row + "," + column).contains(direction))) {
 				int matches, moveX = row + axisX[direction], moveY = column + axisY[direction];
@@ -71,7 +71,8 @@ public class SearchMutant {
 					int finalPointX = moveX - axisX[direction];
 					int finalPointY = moveX - axisY[direction];
 					int vald = 7 - direction;
-					//Estructura para almacenar los matches encontrados y evitar busquedas innecesarias
+					// Estructura para almacenar los matches encontrados y evitar busquedas
+					// innecesarias
 					if (hm.get(finalPointX + "," + finalPointY) != null) {
 						hm.get(finalPointX + "," + finalPointY).add(vald);
 					} else {

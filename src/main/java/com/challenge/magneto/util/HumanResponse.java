@@ -1,9 +1,9 @@
-package com.challenge.magneto.repositories;
+package com.challenge.magneto.util;
 
 import java.util.Arrays;
 
-public class HumanEntity {
-	
+public class HumanResponse {
+
 	private String[] dna;
 
 	public String[] getDna() {
@@ -13,11 +13,17 @@ public class HumanEntity {
 	public void setDna(String[] dna) {
 		this.dna = dna;
 	}
+	public HumanResponse() {}
+	
+	
+	
+	public HumanResponse(String[] dna) {
+		this.dna = dna;
+	}
 
 	@Override
 	public String toString() {
 		return "Human [dna=" + Arrays.toString(dna) + "]";
 	}
-	
-	
+
 }

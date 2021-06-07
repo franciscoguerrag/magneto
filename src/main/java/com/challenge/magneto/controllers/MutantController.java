@@ -1,4 +1,4 @@
-package com.challenge.magneto.restservice;
+package com.challenge.magneto.controllers;
 
 import java.util.Arrays;
 
@@ -10,28 +10,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.challenge.magneto.repositories.Human;
-import com.challenge.magneto.repositories.HumanEntity;
-import com.challenge.magneto.repositories.HumanService;
-import com.challenge.magneto.util.SearchMutant;
+import com.challenge.magneto.restservice.MutantService;
+import com.challenge.magneto.util.HumanResponse;
 
 @RestController
 public class MutantController {
 
 	@Autowired
-	HumanService humanService;
+	MutantService mutantService;
 
 	@PostMapping(path = "/mutant", consumes = "application/json", produces = "application/json")
 	@ResponseBody
-	public ResponseEntity<?>  addMember(@RequestBody HumanEntity human) {
-		SearchMutant searchMutant =new SearchMutant();
-		boolean isMutant = searchMutant.isMutant(human.getDna());
-		System.out.println(Arrays.toString(human.getDna()));
-		humanService.insertHuman(new Human(Arrays.toString(human.getDna()),isMutant));
+	public ResponseEntity<?> checkMutant(@RequestBody HumanResponse human) {
+		boolean isMutant = mutantService.isMutant(human.getDna());
+		System.out.println("Arrays" + Arrays.toString(human.getDna()));
 		if (isMutant)
 			return new ResponseEntity<>(HttpStatus.OK);
 		else
-			return new ResponseEntity<Error>(HttpStatus.FORBIDDEN);
-		
+			return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+
 	}
 }

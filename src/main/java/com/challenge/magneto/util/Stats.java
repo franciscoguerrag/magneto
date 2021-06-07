@@ -1,15 +1,12 @@
-package com.challenge.magneto.repositories;
-
-
-import javax.persistence.*;
+package com.challenge.magneto.util;
 
 public class Stats {
-  
-    private int count_mutant_dna;
-    
-    private int count_human_dna;
-    
-    private int ratio;
+
+	private int count_mutant_dna;
+
+	private int count_human_dna;
+
+	private int ratio;
 
 	public int getCount_mutant_dna() {
 		return count_mutant_dna;
@@ -34,8 +31,5 @@ public class Stats {
 	public void setRatio(int ratio) {
 		this.ratio = ratio;
 	}
-    
-    
-	
 
 }
