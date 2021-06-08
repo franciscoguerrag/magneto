@@ -6,7 +6,6 @@ import java.util.*;
 public class  SearchMutant {
 
 	static HashMap<String, ArrayList<Integer>> hm;
-	static int lenghtDna = 6;
 	static char[][] sequenceAdn;
 
 	/**
@@ -27,10 +26,10 @@ public class  SearchMutant {
 		for (String pattern : patterns) {
 			hm = new HashMap<String, ArrayList<Integer>>();
 			// Recorrido de estructura DNA
-			for (int row = 0; row < lenghtDna; row++) {
+			for (int row = 0; row < dna.length; row++) {
 				boolean find = false;
-				for (int col = 0; col < lenghtDna; col++) {
-					if (analyzePattern(row, col, pattern)) {
+				for (int col = 0; col < dna.length; col++) {
+					if (analyzePattern(row, col, pattern, dna.length)) {
 						if (count >= 1) {
 							return true;
 						}
@@ -42,7 +41,7 @@ public class  SearchMutant {
 		return false;
 	}
 
-	public boolean analyzePattern(int row, int column, String pattern) {
+	public boolean analyzePattern(int row, int column, String pattern, int lenghtDna) {
 		// Solo busqueda si la letra inicia con la base nitrogenada
 		if (sequenceAdn[row][column] != pattern.charAt(0))
 			return false;
