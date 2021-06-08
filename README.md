@@ -93,6 +93,10 @@ Para proposito de pruebas se utilizó base de datos embebida H2
 
 * Ejecutar los diferentes servicios del Proyecto (puerto configurado 5000, se optó por este puerto por que se realizó despliegue para producción en AWS y este es el puerto por defecto para servicio gratuito)
 
+<div align="center"> <img src="src/main/assets/runProjectSpringBootApp.jpg" width="500px"</img> </div>
+
+Mediante la herramienta POSTMAN podrá ejecutar los siguientes servicios disponibles en la nube
+
 **Servicios Principales** 
 
 > POST → /mutant/
@@ -131,17 +135,39 @@ Para proposito de pruebas se utilizó base de datos embebida H2
 ## Ejecutando las pruebas ⚙️
 
 * Para las pruebas se utilizó **JUNIT 5** y la base de datos embebida **H2**
+* Ejecute las pruebas como se muestra en la siguiente imagen
+
+<div align="center"> <img src="src/main/assets/testSpring.jpg" width="500px"</img> </div>
 
 **Cobertura**
 
 * La cobertura del código es de 93.7%
+
+<div align="center"> <img src="src/main/assets/testSpringScreen.jpg" width="500px"</img> </div>
+
+
 * La función principal
   boolean isMutant(String[] dna); 
   Tiene **Code coverage 100%**. 
+  
+ <div align="center"> <img src="src/main/assets/testSpringCoverage.jpg" width="500px"</img> </div>
+
 
 ## Despliegue 📦
 
-Desplegar en AWS, Google Cloud o Heroku (Se utilizó AWS en este caso)
+Desplegar en AWS, Google Cloud o Heroku (Se utilizó AWS para la APP y Heroku para la Base de datos en este caso)
+
+
+* Para despliegue en AWS cree entorno de trabajo (Se utilizo Java 8 running on 64bit Amazon Linux)
+* A continuación cree la App y configure los Logs como Grupo de Registros
+
+ <div align="center"> <img src="src/main/assets/deployAWS.jpg" width="200px"</img> </div>
+ 
+ 
+* Para despliegue en Heroku cree base de datos en apartado Data
+
+ <div align="center"> <img src="src/main/assets/deployHeroku.jpg" width="200px"</img> </div>
+
 
 **Nota**
 
@@ -162,6 +188,6 @@ En versiones iniciales registradas en GitHub se realizaron pruebas en Google Clo
 
 ## Expresiones de Gratitud 🎁
 
-*  Reto desarrollado para ingreso a Mercado Libre 🍺 ☕ . 
+*  Reto desarrollado para Mercado Libre 🍺 ☕ . 
 
 
