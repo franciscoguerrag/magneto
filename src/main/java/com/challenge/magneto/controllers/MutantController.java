@@ -36,7 +36,7 @@ public class MutantController {
 				return new ResponseEntity<>(HttpStatus.FORBIDDEN);
 		} catch (Exception e) {
 			e.printStackTrace();
-			logger.error("Oops! We have an Error." + e.getMessage());
+			logger.error("Oops! We have an Error. checkMutant" + e.getMessage());
 
 		}
 		return null;

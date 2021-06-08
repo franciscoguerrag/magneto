@@ -36,4 +36,9 @@ public class BasicStatsService implements StatsService {
 		return myObject;
 	}
 
+	@Override
+	public void deleteAllHumans() {
+		humanRepository.deleteAll();
+	}
+
 }

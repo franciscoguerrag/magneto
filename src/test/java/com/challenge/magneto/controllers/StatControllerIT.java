@@ -69,5 +69,19 @@ class StatControllerIT {
 		// Verify request succeed
 		Assertions.assertEquals(200, result.getStatusCodeValue());
 	}
+	
+	@Test
+	public void deleteHumans() throws Exception {
+		delete();
+	}
+
+	private void delete() throws Exception {
+		RestTemplate restTemplate = new RestTemplate();
+		final String baseUrl = "http://localhost:" + randomServerPort + "/deleteHumans";
+		URI uri = new URI(baseUrl);
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("X-COM-PERSIST", "true");
+		restTemplate.delete(uri);
+	}
 
 }
