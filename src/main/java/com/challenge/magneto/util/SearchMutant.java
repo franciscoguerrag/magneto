@@ -1,10 +1,16 @@
 package com.challenge.magneto.util;
 
 // Java program to search
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-public class  SearchMutant {
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+public class SearchMutant {
+
+	private static final Logger logger = LogManager.getLogger(SearchMutant.class);
+	final String[] patterns = { "AAAA", "CCCC", "GGGG", "TTTT" };
 	static HashMap<String, ArrayList<Integer>> hm;
 	static char[][] sequenceAdn;
 
@@ -14,21 +20,23 @@ public class  SearchMutant {
 	 * @param dna del humano a analizar
 	 */
 	public boolean isMutant(String[] dna) {
+		logger.debug("check isMutant");
 		int n = dna.length + 1; // NXN
 		sequenceAdn = new char[n][n];
+		// Creando estructura de ADN para procesar matriz char[][]
 		int rows = -1;
 		for (String record : dna) {
 			sequenceAdn[rows = rows + 1] = record.toCharArray();
 		}
+		logger.debug("sequenceAdn" + sequenceAdn);
+		// Recorrer estructura por cada una las secuencias a analizar
 		int count = 0;
-		String[] patterns = { "AAAA", "CCCC", "GGGG", "TTTT" };
-		// Analisis de patrones
 		for (String pattern : patterns) {
 			hm = new HashMap<String, ArrayList<Integer>>();
 			// Recorrido de estructura DNA
 			for (int row = 0; row < dna.length; row++) {
-				boolean find = false;
 				for (int col = 0; col < dna.length; col++) {
+					// Analisis de patrones iniciando con cada caracter disponible
 					if (analyzePattern(row, col, pattern, dna.length)) {
 						if (count >= 1) {
 							return true;
@@ -42,6 +50,8 @@ public class  SearchMutant {
 	}
 
 	public boolean analyzePattern(int row, int column, String pattern, int lenghtDna) {
+		logger.debug("sequenceAdn" + sequenceAdn);
+		logger.debug("analyzePattern" + pattern);
 		// Solo busqueda si la letra inicia con la base nitrogenada
 		if (sequenceAdn[row][column] != pattern.charAt(0))
 			return false;
