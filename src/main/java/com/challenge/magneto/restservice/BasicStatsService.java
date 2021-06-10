@@ -25,7 +25,7 @@ public class BasicStatsService implements StatsService {
 		int count_human_dna = 0;
 		count_mutant_dna = humanRepository.count_mutant_dna();
 		count_human_dna = humanRepository.count_human_dna();
-		double ratio = count_mutant_dna / (float) count_human_dna;
+		double ratio = count_human_dna!=0 ? (count_mutant_dna / (float) count_human_dna) : 0;
 		DecimalFormat df = new DecimalFormat("##.##");
 		JSONObject myObject = new JSONObject();
 		// Cadenas de texto básicas
